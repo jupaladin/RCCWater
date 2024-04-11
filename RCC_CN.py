@@ -60,7 +60,7 @@ with st.expander("筛选"):
         # Get unique years
         unique_years = sorted(df['公布时间'].dt.year.unique())
         # Allow users to select multiple years
-        selected_years = st.multiselect('选择年份', unique_years, default=[max(unique_years)])
+        selected_years = st.multiselect('选择年份', unique_years)
 
         # Get unique search terms
         unique_search_terms = df['搜索词'].unique()
